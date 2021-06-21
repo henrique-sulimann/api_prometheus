@@ -40,13 +40,13 @@ phases:
       - echo Building the Docker image...
       - npm run build
       - export VERSION=$(npm run version --silent)
-      - docker build -t $VERSION .
-      - $(docker tag $VERSION 132818155912.dkr.ecr.us-east-1.amazonaws.com/$VERSION)
+      - docker build -t $(npm run version --silent) .
+      - $(docker tag $(npm run version --silent) 132818155912.dkr.ecr.us-east-1.amazonaws.com/$(npm run version --silent))
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 132818155912.dkr.ecr.us-east-1.amazonaws.com/$VERSION
+      - docker push 132818155912.dkr.ecr.us-east-1.amazonaws.com/$(npm run version --silent)
 #reports:
   #report-name-or-arn:
     #files:
