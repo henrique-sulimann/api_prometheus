@@ -17,6 +17,8 @@ metadata:
   labels:
     app: web
     tier: frontend
+  annotations:
+    fluxcd.io/automated: "true" 
 spec:
   selector:
     matchLabels:
