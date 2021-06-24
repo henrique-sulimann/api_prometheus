@@ -18,7 +18,8 @@ metadata:
     app: web
     tier: frontend
   annotations:
-    fluxcd.io/automated: "true" 
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.app: semver:~1.0
 spec:
   selector:
     matchLabels:
