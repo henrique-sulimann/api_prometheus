@@ -1,0 +1,12 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1alpha1
+kind: ImagePolicy
+metadata:
+  name: api_henrique
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: api_henrique
+  policy:
+    semver:
+      range: 1.x
