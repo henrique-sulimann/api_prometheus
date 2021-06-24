@@ -1,0 +1,11 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1alpha1
+kind: ImageRepository
+metadata:
+  name: api_henrique
+  namespace: flux-system
+spec:
+  secretRef:
+    name: api-henrique-aws-ecr-us-east-1
+  image: 132818155912.dkr.ecr.us-east-1.amazonaws.com/api_henrique
+  interval: 1m0s

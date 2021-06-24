@@ -35,6 +35,8 @@ spec:
       containers:
         - name: api-henrique
           image: 132818155912.dkr.ecr.us-east-1.amazonaws.com/api_henrique:1.1.0
+          ports:
+            - containerPort: 80
       imagePullSecrets:
       - name: api-henrique-aws-ecr-us-east-1
 
