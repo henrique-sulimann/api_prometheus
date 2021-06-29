@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
         - name: api-henrique
-          image: 132818155912.dkr.ecr.us-east-1.amazonaws.com/api_henrique:1.1.0
+          image: 132818155912.dkr.ecr.us-east-1.amazonaws.com/api_henrique:1.1.0 # {"$imagepolicy": "flux-system:api-henrique"}
           ports:
             - containerPort: 80
       imagePullSecrets:
